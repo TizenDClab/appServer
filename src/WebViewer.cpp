@@ -45,11 +45,8 @@ WebViewer::WebViewer(void)
 
 	 __timer.Construct(*this);
 
-	String fileUrlPath(L"/tmp/my_url.txt");
-	String fileListPath(L"/tmp/my_list.txt");
-	result r = E_SUCCESS;
-	r = file_url.Construct(fileUrlPath, "r+");
-	r = file_list.Construct(fileListPath, "r+");
+
+	i = 1;
 }
 
 
@@ -245,7 +242,7 @@ WebViewer::OnActionPerformed(const Control& source, int actionId)
 		//__pWeb->GoBack();
 
 
-		__timer.Start(10);
+		__timer.Start(5000);
 
 
 	}
@@ -602,14 +599,35 @@ WebViewer::OnTimerExpired(Timer& timer)
 	String listMsg;
 
 
-    i++;
+
+
+    timer.Start(5000);
+
+	File file_list;
+	File file_url;
+
+	String fileUrlPath(L"/tmp/my_url.txt");
+	String fileListPath(L"/tmp/my_list.txt");
+
+    r = file_url.Construct(fileUrlPath, "r+");
+    r = file_list.Construct(fileListPath, "r+");
+
 
 	r = file_url.Seek(FILESEEKPOSITION_BEGIN, 0);
 	r = file_url.Read(urlMsg);
 	//char* pBuffer = new char[testMsg.GetLength() + 1];
 	//memcpy(urlMsg, pMappedAddr, testMsg.GetLength());
 
+	/*
+	if(i%2 == 0)
+		__pEdit->SetText("AA");
+	else
+		__pEdit->SetText("BB");
+
+	i++;
+*/
 	__pEdit->SetText(urlMsg);
+
 
 
    // r = file_list.Seek(FILESEEKPOSITION_BEGIN, 0);
@@ -621,7 +639,7 @@ WebViewer::OnTimerExpired(Timer& timer)
 	__pWeb->LoadUrl(urlMsg);
 	__pMainForm->RequestRedraw(true);
 
-	timer.Start(5);
+
 
     AppLog("TimerApp: Current count: %d\n", __count);
 }

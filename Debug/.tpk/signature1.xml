@@ -4,11 +4,11 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>unf1FanF2CRb/gLcQ0dmtugcoWgvFt4Z3cx3DI74mrY=</DigestValue>
+<DigestValue>GM3w7mmvjAd0CAvM3rRwLB1YLvfXL9P/Nbk5QA23hNk=</DigestValue>
 </Reference>
 <Reference URI="bin/TizenCCTV.exe">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>mb97iuGAHW1m2Y1VePYLrizhKoRQv8qYvy9efLb2DjI=</DigestValue>
+<DigestValue>WwGgJ82EE3+wgNtS+Uqn+NNpxr6MCLVr6Qq84RaSHBE=</DigestValue>
 </Reference>
 <Reference URI="data/uritest.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -51,9 +51,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-CJ3E48qi9finZtQ4bUuBh4TD5U4WY5dbs7afnVl73BnKsk50DbUujX2Tefvl57cszyTLPVjQ3wBs
-KSi46DVSt4Rn2LmcRZBuuWBpC5l4Pnl06nsoiFGo+fKWBeI/8gd4ktwL/xuviNnzD1Rj1y7yGqoo
-Va3Ss3UJjXl5OPvzZAg=
+UkuzYFWGJLT4pgEAiV6oemLgDbjPAsUUg9Zmk28t1fme8eMUxAeaHv5QUtjckQbDWXZAisMQH3N7
+eq4HPPElxVz4T/bN9q/LX9uaGtB3LYSpaLZup4uTS/3RXqMrH/geKflS6mce//GahwBNZTg/cGRJ
+UHMnwQmQACoyxSUjiP4=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

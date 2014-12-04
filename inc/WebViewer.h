@@ -129,8 +129,7 @@ private:
 	static const int EDIT_LINE_BOTTOM_MARGIN = 5;
 
 
-	File file_list;
-	File file_url;
+
 
 	Tizen::Ui::Controls::Form* __pMainForm;
 	Tizen::Web::Controls::Web* __pWeb;
@@ -141,7 +140,7 @@ private:
     bool __bTimerExpired;
     int __count;
     Timer __timer;
-	int i =0;
+	int i;
 };
 
 #endif //_WEB_VIEWER_H_
